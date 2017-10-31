@@ -38,7 +38,7 @@ public class Employee {
     }
 
     public double raiseSalary(double raise) {
-        return salary + raise;
+        return salary += raise;
     }
 
     public String getSocialSecurityNumber() {

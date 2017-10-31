@@ -5,12 +5,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class EmployeeTest {
+
     Employee employee;
+    Manager manager;
 
     @Before
     public void before() {
         employee = new Employee(1, "Wilma", "AB123456C", 30000.00 );
+        manager = new Manager(2, "Chad", "A2414232C", 30001.00, "Finance");
     }
+
 
     @Test
     public void canGetEmployeeId() {
@@ -35,10 +39,15 @@ public class EmployeeTest {
     }
 
     @Test
-    public void salaryRaised() {
+    public void canRaiseSalary() {
         employee.raiseSalary(100.00);
         assertEquals(30100.00, employee.getSalary(), 0.01);
 
+    }
+
+    @Test
+    public void canFindDeptName() {
+        assertEquals("Finance", manager.getDeptName());
     }
 
 

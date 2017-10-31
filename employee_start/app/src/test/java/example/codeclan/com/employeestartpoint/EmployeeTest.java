@@ -20,7 +20,7 @@ public class EmployeeTest {
         manager = new Manager(2, "Chad", "A2414232C", 30001.00, "Finance");
         engineer = new Engineer(3, "Shonna", "A2312231X", 32000.00, "Development");
         admin = new Admin(4, "Ragnar", "A32353424V", 22000.00, "Human Resources");
-        director = new Director(5, "Sigurd", "A34646423C", 30002.00, "Sales");
+        director = new Director(5, "Sigurd", "A34646423C", 30002.00, "Sales", 40000);
     }
 
 
@@ -51,6 +51,8 @@ public class EmployeeTest {
         employee.raiseSalary(100.00);
         assertEquals(30100.00, employee.getSalary(), 0.01);
 
+
+
     }
 
     @Test
@@ -58,6 +60,7 @@ public class EmployeeTest {
         assertEquals("Finance", manager.getDeptName());
         assertEquals("Development", engineer.getDeptName());
         assertEquals("Human Resources", admin.getDeptName());
+        assertEquals("Sales", director.getDeptName());
     }
 
 

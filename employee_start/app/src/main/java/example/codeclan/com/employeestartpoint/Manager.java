@@ -8,8 +8,8 @@ public class Manager extends Employee {
 
     private String deptname;
 
-    public Manager(int id, String name, String socialSecurityNumber, double salary, String deptname) {
-        super(id, name, socialSecurityNumber, salary);
+    public Manager(int id, String name, String socialSecurityNumber, double salary, String deptname) {  // Constructor information.
+        super(id, name, socialSecurityNumber, salary);   // Information needed from the parent class. i.e methods and variable names.
         this.deptname = deptname;
     }
 

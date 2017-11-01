@@ -21,28 +21,29 @@ public class Employee {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name != null){
+            this.name = name;
+        }
     }
 
     public double getSalary() {
         return salary;
     }
 
-    public double raiseSalary(double raise) {
-        //if(raise > 0){
-        return salary += raise; //}
-        //else {
-          //  return;
-        //}
+    public void raiseSalary(double raise) {
+        if(raise > 0){
+            this.salary += raise;
+        }
+
     }
 
     public String getSocialSecurityNumber() {
